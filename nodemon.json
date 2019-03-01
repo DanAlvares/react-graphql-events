@@ -1,7 +1,8 @@
 {
     "env": {
-        "MONGO_USER": "username",
-        "MONGO_PASSWORD": "password1",
-        "MONGO_DB": "graphql-events"
+        "MONGO_USER": "admin",
+        "MONGO_PASSWORD": "password121",
+        "MONGO_DB": "graphql-events",
+        "MONGO_QS": "mongodb://admin:password121@ds351455.mlab.com:51455/graphql-events"
     }
 }
