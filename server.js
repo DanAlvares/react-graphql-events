@@ -25,4 +25,4 @@ mongoose.connect(`mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWO
         console.log(err)
     })
 
-app.listen(3000, () => console.log(`Running on port 3000`));
+app.listen(3001, () => console.log(`Running on port 3001`));
