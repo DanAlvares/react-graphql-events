@@ -1,0 +1,45 @@
+.main-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height:3.5rem;
+    width: 100%;
+    background-color: var(--graphql-bg-color);
+    padding:  0 2%; 
+    display: flex;
+    align-items: center;
+}
+
+.main-nav__logo img {
+    top: 4px;
+    position: relative;
+}
+
+.main-nav__logo h1{ 
+    color: var(--graphql-logo-color);
+    display: inline-flex;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.main-nav__items ul {
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+}
+
+.main-nav__items ul li {
+    margin: 0 7%;
+}
+
+.main-nav__items ul li a {
+    color: rgba(255,255,255,.7);
+    padding: 0 3px;
+    text-decoration: none;
+    font-size: .88rem;
+}
+
+.main-nav__items ul li a.active, 
+.main-nav__items ul li a:hover {
+    color: #fff;
+}

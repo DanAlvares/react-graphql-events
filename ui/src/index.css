@@ -1,0 +1,11 @@
+:root {
+  --graphql-logo-color: #e535ab;
+  --graphql-bg-color: #161e26;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
