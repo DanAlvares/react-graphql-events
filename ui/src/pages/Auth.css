@@ -1,0 +1,58 @@
+.auth-form {
+    margin: 5% auto;
+    max-width: 80%;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.form-control label,
+.form-control input {
+    display: block;
+    width: 100%;
+}
+
+.form-control label {
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 1.6rem;
+}
+.form-control input {
+    border: solid 1px #7c7c7c;
+    padding:10px;
+}
+.form-control input:invalid {
+    border: solid 1px var(--invalid) ;
+    box-shadow: 0 0 3px var(--invalid);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-actions button {
+    background-color: #f4f4f4;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.form-actions button:hover{
+    background-color: #eeeeee;
+}
+.form-actions button[type=submit] {
+    background-color: #0c5494;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.form-actions button[type=submit]:hover {
+    background-color: #063e6e;
+}

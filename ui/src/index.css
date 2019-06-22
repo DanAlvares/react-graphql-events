@@ -1,6 +1,8 @@
 :root {
   --graphql-logo-color: #e535ab;
   --graphql-bg-color: #161e26;
+
+  --invalid: rgb(252, 120, 120);
 }
 
 body {
@@ -9,3 +11,8 @@ body {
   padding: 0;
 }
 
+* {
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 100;
+}
