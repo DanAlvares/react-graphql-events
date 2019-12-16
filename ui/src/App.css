@@ -1,3 +1,44 @@
 main.main-content {
     padding: 0 1rem 1rem;
 }
+
+
+.form-actions button,
+.btn {
+  background-color: #f4f4f4;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.form-actions button:hover,
+.btn:hover{
+  background-color: #eeeeee;
+}
+.form-actions button[type=submit],
+.btn[type=submit] {
+  background-color: #0c5494;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.form-actions button[type=submit]:hover,
+.btn[type=submit]:hover {
+  background-color: #063e6e;
+}
+
+.btn.btn-primary {
+  background-color: #0c5494;
+  color: #fff;
+}
+.btn.btn-primary:hover {
+  background-color: #063e6e;
+}
+.btn.btn-secondary {
+  background-color: var(--graphql-logo-color);;
+  color: #fff;
+}
+.btn.btn-secondary:hover {
+  background-color: #d01893;
+}
