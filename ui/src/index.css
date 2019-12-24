@@ -16,3 +16,35 @@ body {
     font-size: 12px;
     font-weight: 100;
 }
+
+
+/* FORMS */
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 100%;
+}
+
+.form-control label {
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.6rem;
+}
+.form-control input,
+.form-control textarea {
+  border: solid 1px #7c7c7c;
+  padding:10px;
+}
+.form-control textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.form-control input:invalid {
+  border: solid 1px var(--invalid) ;
+  box-shadow: 0 0 3px var(--invalid);
+}
