@@ -23,15 +23,8 @@
   padding: 1rem;
 }
 
-.events-list li strong {
-  display: block;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    padding: 1rem;
-    border: solid 1px #ddd;
-    background: #f4f4f4;
-    width: 120px;
+.events-list li button {
+    width: 140px;
 }
 
 .events-list li h2 {

@@ -90,7 +90,39 @@ class EventsPage extends Component {
   }
 
   modalBookHandler() {
-    this.setState({ selectedEvent: null })
+    if (!this.context.token) {
+      this.setState({ selectedEvent: null })
+      return;
+    }
+    const reqBody = {
+      query: `
+          mutation {
+              bookEvent(eventId: "${this.state.selectedEvent._id}") {
+                  _id
+                  createdAt
+                  updatedAt
+              }
+          }
+      `
+    }
+
+    fetch('http://localhost:3001/graphql', {
+      method: 'POST',
+      body: JSON.stringify(reqBody),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ` + this.context.token
+      }
+    }).then(res => {
+      if (res.status !== 200 && res.status !== 201) {
+        throw new Error('Failed!');
+      }
+      return res.json();
+    })
+      .then(res => {
+      }).catch(console.error)
+      .finally(() => this.setState({ selectedEvent: null })
+      )
   }
 
   fetchEvents() {
@@ -128,8 +160,7 @@ class EventsPage extends Component {
       .then(res => {
         this.setState({ events: res.data.events })
       }).catch(console.error)
-      .finally(() =>
-        this.setState({ isLoading: false }))
+      .finally(() => this.setState({ isLoading: false }))
   }
 
   showDetailHandler = eventId => {
@@ -167,10 +198,10 @@ class EventsPage extends Component {
         {this.state.selectedEvent &&
           <Modal
             title={this.state.selectedEvent.title} canCancel canConfirm
-            confirmText={`Book for $` + this.state.selectedEvent.price}
+            confirmText={this.context.token ? `Book for $` + this.state.selectedEvent.price : 'Confirm'}
             onCancel={this.modalCancelHandler.bind(this)}
             onConfirm={this.modalBookHandler.bind(this)}>
-            <p>{this.state.selectedEvent.description}</p>
+            <pre>{JSON.stringify(this.state.selectedEvent, null, 2)}</pre>
           </Modal>
         }
         {this.context.token &&

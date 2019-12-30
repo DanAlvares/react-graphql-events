@@ -1,0 +1,25 @@
+.bookings-list {
+  list-style: none;
+  padding: 1rem;
+}
+
+.bookings-list li {
+  align-items: center;
+  box-shadow: 0px 0px 2px #ccc;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  position: relative;
+  padding: 1rem;
+}
+
+.bookings-list li strong {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.bookings-list li h2 {
+  color: var(--graphql-bg-color);
+  margin: 0;
+}
